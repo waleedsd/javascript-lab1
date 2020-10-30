@@ -3,9 +3,7 @@
 function theFortuneTeller() {
 
     console.log(`${fortunePrint}`)
-    return fortunePrint
-    
-    
+    return fortunePrint    
     }
     let jobTitle = 'Pilot';
     let geographicLocation = 'Tokyo';
@@ -86,34 +84,32 @@ function theFortuneTeller() {
     // EXERCISE 1
     // Write a function named squareNumber that will take one argument (a number), square that number, and return the result. It should also log a string like "The result of squaring the number 3 is 9."
     function squareNumber(number) {
-    return
+    return number**2;
     }
     let number = 7;
-    let squareNumberResult = number**2;
+    let squareNumberResult = squareNumber(number)
     let squareNumberPrint = `The result of squaring the number ${number} is ${squareNumberResult}`;
     console.log(`${squareNumberPrint}`)
-    squareNumber(number)
     document.getElementById('exercise6').innerHTML= squareNumberPrint;
     
     //Functions
     // EXERCISE 2
     // Write a function named halfNumber that will take one argument (a number), divide it by 2, and return the result. It should also log a string like "Half of 5 is 2.5.".
     function halfNumber(numberToBeDevided){
-    return halfNumberResult
+    return numberToBeDevided/2
     }
     let numberToBeDevided = 68;
     let halfNumberResult = numberToBeDevided/2
     let halfNumberPrint = `Half of the number ${numberToBeDevided} is ${halfNumberResult}`
-    console.log(`${halfNumberResult}`)
+    console.log(halfNumberPrint)
     halfNumber(numberToBeDevided)
     document.getElementById('exercise7').innerHTML= halfNumberPrint;
-    
-       
+
     
     // EXERCISE 3
     // Write a function named percentOf that will take two numbers, figure out what percent the first number represents of the second number, and return the result. It should also log a string like "2 is 50% of 4."
     function percentage(num, per) {
-    return percentageResult
+    return num*per
     }
     let num=1200;
     let per = 50/100
@@ -127,7 +123,7 @@ function theFortuneTeller() {
     // Write a function named areaOfCircle that will take one argument (the radius), calculate the area based on that, and return the result. It should also log a string like "The area for a circle with radius 2 is 12.566370614359172."
     //      Bonus: Round the result so there are only two digits after the decimal.
     function areaOfCircle(radius) {
-    return resultArea
+    return radius**2*pi
        }
     let radius = 8;
     let pi = 3.1415926535898;
@@ -146,20 +142,23 @@ function theFortuneTeller() {
     //      3. Calculate the area of a circle with the result of #2 as the radius.   
     //      4. Calculate what percentage that area is of the squared result (#3).
     
-    
-    function motherOfFunctions(choosenNumber){
-     
-    
-    let func1 = halfNumber(choosenNumber); //#1
+  
+    function motherOfFunctions(nNumber){
+    let func1 = halfNumber(nNumber);
+    console.log(`${func1}`)
     let func2 = squareNumber(func1);
+    console.log(`${func2}`)
     let func3 = areaOfCircle(func2);
-    let func4 = areaOfCircle(func3);
-    let func5 = percentage(func4, per);
-    console.log(`${func4}`);
-    
-    document.getElementById('exercise10').innerHTML= func4.toFixed(0);
+    console.log(`${func3}`)
+    let func4 = percentage(func2, func3);
+    console.log(`${func4}`)
+    let finalPrintedResult =  ` the result of taking the half of ${nNumber} is ${func1} 
+    Its square is ${func2} and by having the area by taking the squre no as a radius is ${func3}, finally the result of having squared number as in first field and the area result as second field
+    is ${func4}`
+    document.getElementById('exercise10').innerHTML= finalPrintedResult;
+
     }
-    
-    motherOfFunctions(4)
-    
-    
+    let nNumber = 8
+    let finalResult = motherOfFunctions(nNumber)
+   
+  
