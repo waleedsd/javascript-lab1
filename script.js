@@ -145,15 +145,17 @@ function theFortuneTeller() {
   
     function motherOfFunctions(nNumber){
     let func1 = halfNumber(nNumber);
-    console.log(`${func1}`)
+    console.log(`I choosed Number ${nNumber} and it half is ${func1}`)
     let func2 = squareNumber(func1);
-    console.log(`${func2}`)
+    console.log(`the suqare number of ${func1} is ${func2}`)
     let func3 = areaOfCircle(func2);
-    console.log(`${func3}`)
+    let func3wellDone = func3.toFixed(0)
+    console.log(`if you choose ${func2} as radius you will find that are is ${func3wellDone}`)
     let func4 = percentage(func2, func3);
-    console.log(`${func4}`)
-    let finalPrintedResult =  ` the result of taking the half of ${nNumber} is ${func1}. the square of ${func1} is ${func2} and by having the area by taking the squre no as a radius is ${func3}, finally the result of having squared number as in first field and the area result as second field
-    is ${func4}`
+    let func4WellDone = func4.toFixed(0)
+    console.log(`the final result of having percentage of ${func2} and the area which is ${func3wellDone} is ${func4WellDone}`)
+    let finalPrintedResult =  ` the result of taking the half of ${nNumber} is ${func1}. the square of ${func1} is ${func2} and by having the area by taking the squre no as a radius is ${func3wellDone}, finally the result of having squared number as in first field and the area result as second field
+    is ${func4WellDone}`
     document.getElementById('exercise10').innerHTML= finalPrintedResult;
 
     }
