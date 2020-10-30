@@ -152,8 +152,7 @@ function theFortuneTeller() {
     console.log(`${func3}`)
     let func4 = percentage(func2, func3);
     console.log(`${func4}`)
-    let finalPrintedResult =  ` the result of taking the half of ${nNumber} is ${func1} 
-    Its square is ${func2} and by having the area by taking the squre no as a radius is ${func3}, finally the result of having squared number as in first field and the area result as second field
+    let finalPrintedResult =  ` the result of taking the half of ${nNumber} is ${func1}. the square of ${func1} is ${func2} and by having the area by taking the squre no as a radius is ${func3}, finally the result of having squared number as in first field and the area result as second field
     is ${func4}`
     document.getElementById('exercise10').innerHTML= finalPrintedResult;
 
